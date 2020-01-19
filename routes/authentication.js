@@ -88,7 +88,7 @@ router.post('/forgot', forwardAuthenticated, async (req, res, next) => {
           },
           function(token, user, done) {
             var smtpTransport = nodemailer.createTransport({
-              host: 'gmail',
+              service: 'Gmail',
               auth: {
                 user: 'GMAIL',
                 pass: 'GMAIL Passowrd'
@@ -156,7 +156,7 @@ router.post('/forgot', forwardAuthenticated, async (req, res, next) => {
         },
         function(user, done) {
           var smtpTransport = nodemailer.createTransport({
-            host: 'gmail',
+            service: 'Gmail',
             auth: {
               user: 'Gmail',
               pass: 'Gmail Password'
